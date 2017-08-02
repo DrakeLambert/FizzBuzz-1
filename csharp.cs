@@ -6,21 +6,25 @@ namespace FizzBuzz
     {
         public static void FizzBuzz(int number)
         {
-            if (number%3 == 0 && number%5 == 0)
+            var str = string.Empty;
+            var fizzOrBuzz = false;
+            if (number%3 == 0)
             {
-                Console.WriteLine("FizzBuzz");
-            }
-            else if (number%3 == 0)
-            {
-                Console.WriteLine("Fizz");
+                str = "Fizz";
+                fizzOrBuzz = true;
             }
             else if (number%5 == 0)
             {
-                Console.WriteLine("Buzz");
+                str += "Buzz";
+                fizzOrBuzz = true;
             }
-            else
+            if (fizzOrBuzz)
             {
-                Console.WriteLine(number);
+                Console.WriteLine(str);
+            }
+            else 
+            {
+                Console.WriteLine(number);   
             }
         }
 
